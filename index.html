@@ -99,6 +99,47 @@
         
           <section id="main">
   
+    <article id="post-Git-stash指令" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+    <div class="article-meta">
+      
+	<a href="/2018/12/26/Git-stash指令/" class="article-date">
+	  <time datetime="2018-12-26T09:27:09.654Z" itemprop="datePublished">十二月 26, 2018</time>
+	</a>
+
+       
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Git-stash-指令"><a href="#Git-stash-指令" class="headerlink" title="Git stash 指令"></a>Git stash 指令</h2><p>在使用git对代码进行版本管理的时候，git stash指令是一个非常方便且人性化的指令。如果你在某一分支上编写代码时，突然需要切换到其他分支上去，stash可以帮忙储藏当前分支上未commit的文件，分支干净了，当然也就可以切换分支啦。</p>
+<p>储藏指令：<br><strong>$ git stash</strong></p>
+<p>查看现有储藏：<br><strong>$ git stash list</strong></p>
+<pre><code>stash@{0}: xxx
+stash@{1}: xxxxx
+stash@{2}: xxxxxx
+</code></pre><p>拿出最近的储藏：<br><strong>$ git stash apply</strong></p>
+<p>拿出更早的储藏：<br><strong>$ git stash apply stash@{2}</strong></p>
+<p>拿出最近的储藏，并将其从list中移除：<br><strong>$ git stash pop</strong></p>
+<p>（还有几个指令还没完全弄清楚，<a href="https://git-scm.com/book/zh/v1/Git-%E5%B7%A5%E5%85%B7-%E5%82%A8%E8%97%8F%EF%BC%88Stashing%EF%BC%89" target="_blank" rel="noopener">官方stash文档</a>）<br>（To Be Continue）</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-CSS中外边距塌陷问题及其解决方法" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -349,6 +390,18 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/2018/12/26/Git-stash指令/">(no title)</a></h6>
+              <span>十二月 26, 2018</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/2018/12/18/CSS中外边距塌陷问题及其解决方法/">(no title)</a></h6>
               <span>十二月 18, 2018</span>
             </div>
@@ -397,7 +450,7 @@
     <h3 class="widget-title">归档</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
