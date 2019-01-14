@@ -9,18 +9,18 @@
   
   
   
-  <meta name="description" content="CSS中外边距塌陷问题及其解决方法外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。会发生外边距折叠的三种基本情况：1.相邻元素之间2.父元素与其第一个或最后一个子元素之间3.空的块级元素 关于外边距塌陷，MDN上有更详细的说明，可供参考MDN-外边距合并  这里我们用一个相邻元素做示例： 12345// HTML代码&amp;lt">
+  <meta name="description" content="title:CSS中外边距塌陷问题及其解决方法 tags:CSS外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。会发生外边距折叠的三种基本情况：1.相邻元素之间2.父元素与其第一个或最后一个子元素之间3.空的块级元素 关于外边距塌陷，MDN上有更详细的说明，可供参考MDN-外边距合并  这里我们用一个相邻元素做示例： 1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="XiaoMan&#39;s Blog">
 <meta property="og:url" content="http://yoursite.com/2018/12/18/CSS中外边距塌陷问题及其解决方法/index.html">
 <meta property="og:site_name" content="XiaoMan&#39;s Blog">
-<meta property="og:description" content="CSS中外边距塌陷问题及其解决方法外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。会发生外边距折叠的三种基本情况：1.相邻元素之间2.父元素与其第一个或最后一个子元素之间3.空的块级元素 关于外边距塌陷，MDN上有更详细的说明，可供参考MDN-外边距合并  这里我们用一个相邻元素做示例： 12345// HTML代码&amp;lt">
+<meta property="og:description" content="title:CSS中外边距塌陷问题及其解决方法 tags:CSS外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。会发生外边距折叠的三种基本情况：1.相邻元素之间2.父元素与其第一个或最后一个子元素之间3.空的块级元素 关于外边距塌陷，MDN上有更详细的说明，可供参考MDN-外边距合并  这里我们用一个相邻元素做示例： 1">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://m.qpic.cn/psb?/V12DIXtJ37eHpl/VHUW2gzaM3pD*3MjdLkuQrpXNpYn8*8SdtPPQbxxDIE!/b/dLwAAAAAAAAA&bo=DAE1AQAAAAAKBxI!&rf=viewer_4">
-<meta property="og:updated_time" content="2018-12-18T04:23:08.941Z">
+<meta property="og:updated_time" content="2019-01-14T06:26:15.299Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="XiaoMan&#39;s Blog">
-<meta name="twitter:description" content="CSS中外边距塌陷问题及其解决方法外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。会发生外边距折叠的三种基本情况：1.相邻元素之间2.父元素与其第一个或最后一个子元素之间3.空的块级元素 关于外边距塌陷，MDN上有更详细的说明，可供参考MDN-外边距合并  这里我们用一个相邻元素做示例： 12345// HTML代码&amp;lt">
+<meta name="twitter:description" content="title:CSS中外边距塌陷问题及其解决方法 tags:CSS外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。会发生外边距折叠的三种基本情况：1.相邻元素之间2.父元素与其第一个或最后一个子元素之间3.空的块级元素 关于外边距塌陷，MDN上有更详细的说明，可供参考MDN-外边距合并  这里我们用一个相邻元素做示例： 1">
 <meta name="twitter:image" content="http://m.qpic.cn/psb?/V12DIXtJ37eHpl/VHUW2gzaM3pD*3MjdLkuQrpXNpYn8*8SdtPPQbxxDIE!/b/dLwAAAAAAAAA&bo=DAE1AQAAAAAKBxI!&rf=viewer_4">
   
     <link rel="alternate" href="/atom.xml" title="XiaoMan&#39;s Blog" type="application/atom+xml">
@@ -122,12 +122,14 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="CSS中外边距塌陷问题及其解决方法"><a href="#CSS中外边距塌陷问题及其解决方法" class="headerlink" title="CSS中外边距塌陷问题及其解决方法"></a>CSS中外边距塌陷问题及其解决方法</h2><h4 id="外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。"><a href="#外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。" class="headerlink" title="外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。"></a>外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。</h4><p>会发生外边距折叠的三种基本情况：<br>1.相邻元素之间<br>2.父元素与其第一个或最后一个子元素之间<br>3.空的块级元素</p>
+        <hr>
+<p>title:CSS中外边距塌陷问题及其解决方法</p>
+<h2 id="tags-CSS"><a href="#tags-CSS" class="headerlink" title="tags:CSS"></a>tags:CSS</h2><h4 id="外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。"><a href="#外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。" class="headerlink" title="外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。"></a>外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。</h4><p>会发生外边距折叠的三种基本情况：<br>1.相邻元素之间<br>2.父元素与其第一个或最后一个子元素之间<br>3.空的块级元素</p>
 <p>关于外边距塌陷，MDN上有更详细的说明，可供参考<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing" target="_blank" rel="noopener">MDN-外边距合并</a></p>
 <hr>
 <p>这里我们用一个相邻元素做示例：</p>
-<p><img src="http://m.qpic.cn/psb?/V12DIXtJ37eHpl/VHUW2gzaM3pD*3MjdLkuQrpXNpYn8*8SdtPPQbxxDIE!/b/dLwAAAAAAAAA&amp;bo=DAE1AQAAAAAKBxI!&amp;rf=viewer_4" alt="Example"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// HTML代码</span><br><span class="line">&lt;div class=&quot;back&quot;&gt;  </span><br><span class="line">    &lt;div class=&quot;one&quot;&gt;1&lt;/div&gt;  </span><br><span class="line">    &lt;div class=&quot;two&quot;&gt;2&lt;/div&gt;  </span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// CSS代码</span><br><span class="line">.back &#123;  </span><br><span class="line">    height: 400px;  </span><br><span class="line">    width: 400px;  </span><br><span class="line">    background: #fedeae;  </span><br><span class="line">&#125;  </span><br><span class="line">.one &#123;  </span><br><span class="line">    height: 100px;  </span><br><span class="line">    width: 100px;  </span><br><span class="line">    background: pink;  </span><br><span class="line">    margin-bottom: 50px;  </span><br><span class="line">&#125;  </span><br><span class="line">.two &#123;  </span><br><span class="line">    height: 100px;  </span><br><span class="line">    width: 100px;  </span><br><span class="line">    background: skyblue;  </span><br><span class="line">    margin-top: 50px;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://m.qpic.cn/psb?/V12DIXtJ37eHpl/VHUW2gzaM3pD*3MjdLkuQrpXNpYn8*8SdtPPQbxxDIE!/b/dLwAAAAAAAAA&amp;bo=DAE1AQAAAAAKBxI!&amp;rf=viewer_4" alt="Example"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// HTML代码</span><br><span class="line">&lt;div class=&quot;back&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;one&quot;&gt;1&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;two&quot;&gt;2&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// CSS代码</span><br><span class="line">.back &#123;</span><br><span class="line">    height: 400px;</span><br><span class="line">    width: 400px;</span><br><span class="line">    background: #fedeae;</span><br><span class="line">&#125;</span><br><span class="line">.one &#123;</span><br><span class="line">    height: 100px;</span><br><span class="line">    width: 100px;</span><br><span class="line">    background: pink;</span><br><span class="line">    margin-bottom: 50px;</span><br><span class="line">&#125;</span><br><span class="line">.two &#123;</span><br><span class="line">    height: 100px;</span><br><span class="line">    width: 100px;</span><br><span class="line">    background: skyblue;</span><br><span class="line">    margin-top: 50px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>可以看到，块元素1和2之间原本应该有100px的外间距，但实际结果是只有50px（由于两个margin间距值均为50px，所以取最大值就是50px了，如果一个为50px，一个为100px，则取最大值100px。）</p>
 <hr>
 <p>知道问题后，就需要解决问题了，相邻元素之间margin塌陷问题的解决方法：</p>
@@ -173,25 +175,6 @@
   </div>
   
     
-<nav id="article-nav">
-  
-    <a href="/2018/12/26/Git-stash指令/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2018/12/13/如何用hexo在博客上写文章/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">如何用hexo在博客上写文章</div>
-    </a>
-  
-</nav>
-
   
 </article>
 
@@ -201,7 +184,7 @@
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS中外边距塌陷问题及其解决方法"><span class="nav-number">1.</span> <span class="nav-text">CSS中外边距塌陷问题及其解决方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。"><span class="nav-number">1.0.1.</span> <span class="nav-text">外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法一：给靠后的快元素添加float：left-right"><span class="nav-number">1.0.2.</span> <span class="nav-text">方法一：给靠后的快元素添加float：left/right</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#（或给靠后的快元素添加position：absolute-fixed）"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">（或给靠后的快元素添加position：absolute/fixed）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法二：给靠后的块元素添加display：inline-block"><span class="nav-number">1.0.3.</span> <span class="nav-text">方法二：给靠后的块元素添加display：inline-block</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#（IE6和IE7下不完全支持display-inline-block，所以如果要兼容IE6、IE7要加上-display-inline-zoom-1）"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">（IE6和IE7下不完全支持display:inline-block，所以如果要兼容IE6、IE7要加上*display:inline;zoom:1）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（注：以上两种方法同样适用于解决父子块元素之间的margin塌陷问题）"><span class="nav-number">1.0.3.2.</span> <span class="nav-text">（注：以上两种方法同样适用于解决父子块元素之间的margin塌陷问题）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法一：给父元素设置一个border"><span class="nav-number">1.0.4.</span> <span class="nav-text">方法一：给父元素设置一个border</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法二：给父元素添加overflow：hidden"><span class="nav-number">1.0.5.</span> <span class="nav-text">方法二：给父元素添加overflow：hidden</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法三：给父元素设定padding值"><span class="nav-number">1.0.6.</span> <span class="nav-text">方法三：给父元素设定padding值</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#至于，空块级元素的外边距塌陷，情况要更复杂一些，而且实际应用的地方很少。以一个有背景色的块元素为参照，可以看出空块元素的外边距塌陷也是取top与bottom的最大值，但空块元素内的空间分布要更复杂一些。感兴趣的小伙伴可以自己再实践一下"><span class="nav-number">1.0.6.0.1.</span> <span class="nav-text">至于，空块级元素的外边距塌陷，情况要更复杂一些，而且实际应用的地方很少。以一个有背景色的块元素为参照，可以看出空块元素的外边距塌陷也是取top与bottom的最大值，但空块元素内的空间分布要更复杂一些。感兴趣的小伙伴可以自己再实践一下~</span></a></li></ol></li></ol></li></ol>
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tags-CSS"><span class="nav-number">1.</span> <span class="nav-text">tags:CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。"><span class="nav-number">1.0.1.</span> <span class="nav-text">外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法一：给靠后的快元素添加float：left-right"><span class="nav-number">1.0.2.</span> <span class="nav-text">方法一：给靠后的快元素添加float：left/right</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#（或给靠后的快元素添加position：absolute-fixed）"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">（或给靠后的快元素添加position：absolute/fixed）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法二：给靠后的块元素添加display：inline-block"><span class="nav-number">1.0.3.</span> <span class="nav-text">方法二：给靠后的块元素添加display：inline-block</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#（IE6和IE7下不完全支持display-inline-block，所以如果要兼容IE6、IE7要加上-display-inline-zoom-1）"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">（IE6和IE7下不完全支持display:inline-block，所以如果要兼容IE6、IE7要加上*display:inline;zoom:1）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（注：以上两种方法同样适用于解决父子块元素之间的margin塌陷问题）"><span class="nav-number">1.0.3.2.</span> <span class="nav-text">（注：以上两种方法同样适用于解决父子块元素之间的margin塌陷问题）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法一：给父元素设置一个border"><span class="nav-number">1.0.4.</span> <span class="nav-text">方法一：给父元素设置一个border</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法二：给父元素添加overflow：hidden"><span class="nav-number">1.0.5.</span> <span class="nav-text">方法二：给父元素添加overflow：hidden</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法三：给父元素设定padding值"><span class="nav-number">1.0.6.</span> <span class="nav-text">方法三：给父元素设定padding值</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#至于，空块级元素的外边距塌陷，情况要更复杂一些，而且实际应用的地方很少。以一个有背景色的块元素为参照，可以看出空块元素的外边距塌陷也是取top与bottom的最大值，但空块元素内的空间分布要更复杂一些。感兴趣的小伙伴可以自己再实践一下"><span class="nav-number">1.0.6.0.1.</span> <span class="nav-text">至于，空块级元素的外边距塌陷，情况要更复杂一些，而且实际应用的地方很少。以一个有背景色的块元素为参照，可以看出空块元素的外边距塌陷也是取top与bottom的最大值，但空块元素内的空间分布要更复杂一些。感兴趣的小伙伴可以自己再实践一下~</span></a></li></ol></li></ol></li></ol>
     
     </div>
   </aside>
