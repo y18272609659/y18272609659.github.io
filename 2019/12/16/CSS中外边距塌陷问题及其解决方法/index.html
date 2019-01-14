@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>CSS中外边距塌陷问题及其解决方法 | XiaoMan&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="CSS">
+  
+  
+  
+  
+  <meta name="description" content="外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。会发生外边距折叠的三种基本情况：1.相邻元素之间2.父元素与其第一个或最后一个子元素之间3.空的块级元素 关于外边距塌陷，MDN上有更详细的说明，可供参考MDN-外边距合并  这里我们用一个相邻元素做示例： 12345// HTML代码&amp;lt;div class=&amp;quot;">
+<meta name="keywords" content="CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS中外边距塌陷问题及其解决方法">
+<meta property="og:url" content="http://yoursite.com/2019/12/16/CSS中外边距塌陷问题及其解决方法/index.html">
+<meta property="og:site_name" content="XiaoMan&#39;s Blog">
+<meta property="og:description" content="外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。会发生外边距折叠的三种基本情况：1.相邻元素之间2.父元素与其第一个或最后一个子元素之间3.空的块级元素 关于外边距塌陷，MDN上有更详细的说明，可供参考MDN-外边距合并  这里我们用一个相邻元素做示例： 12345// HTML代码&amp;lt;div class=&amp;quot;">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V12DIXtJ37eHpl/VHUW2gzaM3pD*3MjdLkuQrpXNpYn8*8SdtPPQbxxDIE!/b/dLwAAAAAAAAA&bo=DAE1AQAAAAAKBxI!&rf=viewer_4">
+<meta property="og:updated_time" content="2019-01-14T13:12:19.012Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS中外边距塌陷问题及其解决方法">
+<meta name="twitter:description" content="外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。会发生外边距折叠的三种基本情况：1.相邻元素之间2.父元素与其第一个或最后一个子元素之间3.空的块级元素 关于外边距塌陷，MDN上有更详细的说明，可供参考MDN-外边距合并  这里我们用一个相邻元素做示例： 12345// HTML代码&amp;lt;div class=&amp;quot;">
+<meta name="twitter:image" content="http://m.qpic.cn/psb?/V12DIXtJ37eHpl/VHUW2gzaM3pD*3MjdLkuQrpXNpYn8*8SdtPPQbxxDIE!/b/dLwAAAAAAAAA&bo=DAE1AQAAAAAKBxI!&rf=viewer_4">
+  
+    <link rel="alternate" href="/atom.xml" title="XiaoMan&#39;s Blog" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/fashion.css">
+  <link rel="stylesheet" href="/css/glyphs.css">
+
+</head>
+</html>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="XiaoMan&#39;s Blog" rel="home"> XiaoMan&#39;s Blog </a>
+            
+          </h1>
+          
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-CSS中外边距塌陷问题及其解决方法" style="width: 66%; float:left;" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      CSS中外边距塌陷问题及其解决方法
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/12/16/CSS中外边距塌陷问题及其解决方法/" class="article-date">
+	  <time datetime="2019-12-16T07:23:38.000Z" itemprop="datePublished">十二月 16, 2019</time>
+	</a>
+
+       
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。"><a href="#外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。" class="headerlink" title="外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。"></a>外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。</h4><p>会发生外边距折叠的三种基本情况：<br>1.相邻元素之间<br>2.父元素与其第一个或最后一个子元素之间<br>3.空的块级元素</p>
+<p>关于外边距塌陷，MDN上有更详细的说明，可供参考<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing" target="_blank" rel="noopener">MDN-外边距合并</a></p>
+<hr>
+<p>这里我们用一个相邻元素做示例：</p>
+<p><img src="http://m.qpic.cn/psb?/V12DIXtJ37eHpl/VHUW2gzaM3pD*3MjdLkuQrpXNpYn8*8SdtPPQbxxDIE!/b/dLwAAAAAAAAA&amp;bo=DAE1AQAAAAAKBxI!&amp;rf=viewer_4" alt="Example"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// HTML代码</span><br><span class="line">&lt;div class=&quot;back&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;one&quot;&gt;1&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;two&quot;&gt;2&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// CSS代码</span><br><span class="line">.back &#123;</span><br><span class="line">    height: 400px;</span><br><span class="line">    width: 400px;</span><br><span class="line">    background: #fedeae;</span><br><span class="line">&#125;</span><br><span class="line">.one &#123;</span><br><span class="line">    height: 100px;</span><br><span class="line">    width: 100px;</span><br><span class="line">    background: pink;</span><br><span class="line">    margin-bottom: 50px;</span><br><span class="line">&#125;</span><br><span class="line">.two &#123;</span><br><span class="line">    height: 100px;</span><br><span class="line">    width: 100px;</span><br><span class="line">    background: skyblue;</span><br><span class="line">    margin-top: 50px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以看到，块元素1和2之间原本应该有100px的外间距，但实际结果是只有50px（由于两个margin间距值均为50px，所以取最大值就是50px了，如果一个为50px，一个为100px，则取最大值100px。）</p>
+<hr>
+<p>知道问题后，就需要解决问题了，相邻元素之间margin塌陷问题的解决方法：</p>
+<h4 id="方法一：给靠后的快元素添加float：left-right"><a href="#方法一：给靠后的快元素添加float：left-right" class="headerlink" title="方法一：给靠后的快元素添加float：left/right"></a>方法一：给靠后的快元素添加float：left/right</h4><h5 id="（或给靠后的快元素添加position：absolute-fixed）"><a href="#（或给靠后的快元素添加position：absolute-fixed）" class="headerlink" title="（或给靠后的快元素添加position：absolute/fixed）"></a>（或给靠后的快元素添加position：absolute/fixed）</h5><p><strong>float</strong>：定义元素在哪个方向浮动。<br><strong>absolute</strong>：生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。<br><strong>fixed</strong>：生成绝对定位的元素，相对于浏览器窗口进行定位。</p>
+<h4 id="方法二：给靠后的块元素添加display：inline-block"><a href="#方法二：给靠后的块元素添加display：inline-block" class="headerlink" title="方法二：给靠后的块元素添加display：inline-block"></a>方法二：给靠后的块元素添加display：inline-block</h4><h5 id="（IE6和IE7下不完全支持display-inline-block，所以如果要兼容IE6、IE7要加上-display-inline-zoom-1）"><a href="#（IE6和IE7下不完全支持display-inline-block，所以如果要兼容IE6、IE7要加上-display-inline-zoom-1）" class="headerlink" title="（IE6和IE7下不完全支持display:inline-block，所以如果要兼容IE6、IE7要加上*display:inline;zoom:1）"></a>（IE6和IE7下不完全支持display:inline-block，所以如果要兼容IE6、IE7要加上*display:inline;zoom:1）</h5><h5 id="（注：以上两种方法同样适用于解决父子块元素之间的margin塌陷问题）"><a href="#（注：以上两种方法同样适用于解决父子块元素之间的margin塌陷问题）" class="headerlink" title="（注：以上两种方法同样适用于解决父子块元素之间的margin塌陷问题）"></a>（注：以上两种方法同样适用于解决父子块元素之间的margin塌陷问题）</h5><hr>
+<p>另外，如果是父子元素之间的margin塌陷，还可以尝试使用以下方式解决：</p>
+<h4 id="方法一：给父元素设置一个border"><a href="#方法一：给父元素设置一个border" class="headerlink" title="方法一：给父元素设置一个border"></a>方法一：给父元素设置一个border</h4><h4 id="方法二：给父元素添加overflow：hidden"><a href="#方法二：给父元素添加overflow：hidden" class="headerlink" title="方法二：给父元素添加overflow：hidden"></a>方法二：给父元素添加overflow：hidden</h4><h4 id="方法三：给父元素设定padding值"><a href="#方法三：给父元素设定padding值" class="headerlink" title="方法三：给父元素设定padding值"></a>方法三：给父元素设定padding值</h4><hr>
+<h6 id="至于，空块级元素的外边距塌陷，情况要更复杂一些，而且实际应用的地方很少。以一个有背景色的块元素为参照，可以看出空块元素的外边距塌陷也是取top与bottom的最大值，但空块元素内的空间分布要更复杂一些。感兴趣的小伙伴可以自己再实践一下"><a href="#至于，空块级元素的外边距塌陷，情况要更复杂一些，而且实际应用的地方很少。以一个有背景色的块元素为参照，可以看出空块元素的外边距塌陷也是取top与bottom的最大值，但空块元素内的空间分布要更复杂一些。感兴趣的小伙伴可以自己再实践一下" class="headerlink" title="至于，空块级元素的外边距塌陷，情况要更复杂一些，而且实际应用的地方很少。以一个有背景色的块元素为参照，可以看出空块元素的外边距塌陷也是取top与bottom的最大值，但空块元素内的空间分布要更复杂一些。感兴趣的小伙伴可以自己再实践一下~"></a>至于，空块级元素的外边距塌陷，情况要更复杂一些，而且实际应用的地方很少。以一个有背景色的块元素为参照，可以看出空块元素的外边距塌陷也是取top与bottom的最大值，但空块元素内的空间分布要更复杂一些。感兴趣的小伙伴可以自己再实践一下~</h6><p>（END）</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/01/14/Git-更改本地分支名称/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">Git-更改本地分支名称</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。"><span class="nav-number">1.</span> <span class="nav-text">外边距塌陷（又叫外边距合并、外边距折叠），是指当两个块元素彼此接触时，它们的间距将取两个相邻外边界的最大值，而非两者的总和。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法一：给靠后的快元素添加float：left-right"><span class="nav-number">2.</span> <span class="nav-text">方法一：给靠后的快元素添加float：left/right</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#（或给靠后的快元素添加position：absolute-fixed）"><span class="nav-number">2.1.</span> <span class="nav-text">（或给靠后的快元素添加position：absolute/fixed）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法二：给靠后的块元素添加display：inline-block"><span class="nav-number">3.</span> <span class="nav-text">方法二：给靠后的块元素添加display：inline-block</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#（IE6和IE7下不完全支持display-inline-block，所以如果要兼容IE6、IE7要加上-display-inline-zoom-1）"><span class="nav-number">3.1.</span> <span class="nav-text">（IE6和IE7下不完全支持display:inline-block，所以如果要兼容IE6、IE7要加上*display:inline;zoom:1）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（注：以上两种方法同样适用于解决父子块元素之间的margin塌陷问题）"><span class="nav-number">3.2.</span> <span class="nav-text">（注：以上两种方法同样适用于解决父子块元素之间的margin塌陷问题）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法一：给父元素设置一个border"><span class="nav-number">4.</span> <span class="nav-text">方法一：给父元素设置一个border</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法二：给父元素添加overflow：hidden"><span class="nav-number">5.</span> <span class="nav-text">方法二：给父元素添加overflow：hidden</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法三：给父元素设定padding值"><span class="nav-number">6.</span> <span class="nav-text">方法三：给父元素设定padding值</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#至于，空块级元素的外边距塌陷，情况要更复杂一些，而且实际应用的地方很少。以一个有背景色的块元素为参照，可以看出空块元素的外边距塌陷也是取top与bottom的最大值，但空块元素内的空间分布要更复杂一些。感兴趣的小伙伴可以自己再实践一下"><span class="nav-number">6.0.1.</span> <span class="nav-text">至于，空块级元素的外边距塌陷，情况要更复杂一些，而且实际应用的地方很少。以一个有背景色的块元素为参照，可以看出空块元素的外边距塌陷也是取top与bottom的最大值，但空块元素内的空间分布要更复杂一些。感兴趣的小伙伴可以自己再实践一下~</span></a></li></ol></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2019 XiaoMan&#39;s Blog All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s5.cnzz.com/z_stat.php?id=1275621465&web_id=1275621465" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
