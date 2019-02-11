@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="XiaoMan&#39;s Blog">
 <meta property="og:description" content="在使用git对代码进行版本管理的时候，git stash指令是一个非常方便且人性化的指令。如果你在某一分支上编写代码时，突然需要切换到其他分支上去，stash可以帮忙储藏当前分支上未commit的文件，分支干净了，当然也就可以切换分支啦。 储藏指令：$ git stash 查看现有储藏：$ git stash list stash@{0}: xxx stash@{1}: xxxxx stash@{">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-14T13:10:21.631Z">
+<meta property="og:updated_time" content="2019-02-11T04:06:14.695Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git stash 指令">
 <meta name="twitter:description" content="在使用git对代码进行版本管理的时候，git stash指令是一个非常方便且人性化的指令。如果你在某一分支上编写代码时，突然需要切换到其他分支上去，stash可以帮忙储藏当前分支上未commit的文件，分支干净了，当然也就可以切换分支啦。 储藏指令：$ git stash 查看现有储藏：$ git stash list stash@{0}: xxx stash@{1}: xxxxx stash@{">
@@ -143,6 +143,10 @@ stash@{2}: xxxxxx
 <p>拿出更早的储藏：<br><strong>$ git stash apply stash@{2}</strong></p>
 <p>拿出最近的储藏，并将其从list中移除：<br><strong>$ git stash pop</strong></p>
 <p>（还有几个指令还没完全弄清楚，<a href="https://git-scm.com/book/zh/v1/Git-%E5%B7%A5%E5%85%B7-%E5%82%A8%E8%97%8F%EF%BC%88Stashing%EF%BC%89" target="_blank" rel="noopener">官方stash文档</a>）<br>（To Be Continue）</p>
+<p>2019-02-11</p>
+<ul>
+<li>补充：<br>关于pop：使用pop指令，可以把某个Stash拿出来并套用在目前的分支上，然后，那个套用过的Stash就会自动被删除。</li>
+</ul>
 
       
     </div>
