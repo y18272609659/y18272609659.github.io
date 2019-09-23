@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>CSS-文字描边-webkit-text-stroke属性 | XiaoMan&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="hexo">
+  
+  
+  
+  
+  <meta name="description" content="之前工作中遇到需要文字描边的情况，学习到了text-stroke属性，记录总结一下。 -webkit-text-stroke CSS属性为文本字符指定了宽和颜色。它是-webkit-text-stroke-width 和-webkit-text-stroke-color属性的缩写。 🌰栗子1234/* Width and color values */-webkit-text-stroke: 4">
+<meta name="keywords" content="hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS-文字描边-webkit-text-stroke属性">
+<meta property="og:url" content="http://yoursite.com/2019/04/17/CSS-文字描边-text-stroke属性/index.html">
+<meta property="og:site_name" content="XiaoMan&#39;s Blog">
+<meta property="og:description" content="之前工作中遇到需要文字描边的情况，学习到了text-stroke属性，记录总结一下。 -webkit-text-stroke CSS属性为文本字符指定了宽和颜色。它是-webkit-text-stroke-width 和-webkit-text-stroke-color属性的缩写。 🌰栗子1234/* Width and color values */-webkit-text-stroke: 4">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://storage.medinc.cn/01DBHX62PY54CR5THMJM6WXZK7.png">
+<meta property="og:image" content="https://storage.medinc.cn/01DBHYSKD1BK2Z7MRSV6PFKY2K.png">
+<meta property="og:updated_time" content="2019-09-23T14:59:01.717Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS-文字描边-webkit-text-stroke属性">
+<meta name="twitter:description" content="之前工作中遇到需要文字描边的情况，学习到了text-stroke属性，记录总结一下。 -webkit-text-stroke CSS属性为文本字符指定了宽和颜色。它是-webkit-text-stroke-width 和-webkit-text-stroke-color属性的缩写。 🌰栗子1234/* Width and color values */-webkit-text-stroke: 4">
+<meta name="twitter:image" content="https://storage.medinc.cn/01DBHX62PY54CR5THMJM6WXZK7.png">
+  
+    <link rel="alternate" href="/atom.xml" title="XiaoMan&#39;s Blog" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/fashion.css">
+  <link rel="stylesheet" href="/css/glyphs.css">
+
+</head>
+</html>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="XiaoMan&#39;s Blog" rel="home"> XiaoMan&#39;s Blog </a>
+            
+          </h1>
+          
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-CSS-文字描边-text-stroke属性" style="width: 66%; float:left;" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      CSS-文字描边-webkit-text-stroke属性
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/04/17/CSS-文字描边-text-stroke属性/" class="article-date">
+	  <time datetime="2019-04-17T12:15:14.000Z" itemprop="datePublished">四月 17, 2019</time>
+	</a>
+
+       
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="之前工作中遇到需要文字描边的情况，学习到了text-stroke属性，记录总结一下。"><a href="#之前工作中遇到需要文字描边的情况，学习到了text-stroke属性，记录总结一下。" class="headerlink" title="之前工作中遇到需要文字描边的情况，学习到了text-stroke属性，记录总结一下。"></a><em>之前工作中遇到需要文字描边的情况，学习到了text-stroke属性，记录总结一下。</em></h5><p> -webkit-text-stroke CSS属性为文本字符指定了<strong>宽</strong>和<strong>颜色</strong>。它是<strong>-webkit-text-stroke-width</strong> 和<strong>-webkit-text-stroke-color</strong>属性的缩写。</p>
+<p>🌰栗子<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Width and color values */</span></span><br><span class="line"><span class="selector-tag">-webkit-text-stroke</span>: 4<span class="selector-tag">px</span> <span class="selector-tag">navy</span>;</span><br><span class="line"><span class="comment">/* Global values */</span></span><br><span class="line">-webkit-text-stroke: inherit / initial / unset;</span><br></pre></td></tr></table></figure></p>
+<p>描边过后大概酱紫</p>
+<p><img src="https://storage.medinc.cn/01DBHX62PY54CR5THMJM6WXZK7.png" alt="示例"></p>
+<h4 id="如果想要实现多重描边效果，伪元素-before-after-多层叠加模拟。"><a href="#如果想要实现多重描边效果，伪元素-before-after-多层叠加模拟。" class="headerlink" title="如果想要实现多重描边效果，伪元素(:before + :after)多层叠加模拟。"></a>如果想要实现多重描边效果，伪元素(:before + :after)多层叠加模拟。</h4><p>🌰栗子<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"example"</span> <span class="attr">data-text</span>=<span class="string">"The stroke of this text is pink."</span>&gt;</span>The stroke of this text is pink.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">  <span class="selector-id">#example</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">48px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">-webkit-text-stroke</span>: <span class="number">2px</span> pink;</span><br><span class="line"> &#125;  <span class="selector-id">#example</span><span class="selector-pseudo">::before</span>, <span class="selector-id">#example</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="built_in">attr</span>(data-text);</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">8px</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: -<span class="number">1</span>;</span><br><span class="line"> &#125;  <span class="selector-id">#example</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">  <span class="attribute">-webkit-text-stroke</span>: <span class="number">20px</span> yellow;</span><br><span class="line"> &#125;  <span class="selector-id">#example</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">-webkit-text-stroke</span>: <span class="number">10px</span> red;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>效果是这样：<br><img src="https://storage.medinc.cn/01DBHYSKD1BK2Z7MRSV6PFKY2K.png" alt="示例"></p>
+<p>解析一下上面的代码：</p>
+<blockquote>
+<ul>
+<li>:before CSS中，<code>::before</code> 创建一个伪元素，其将成为匹配选中的元素的第一个子元素。常通过 content 属性来为一个元素添加修饰性的内容，默认为行内元素。 :after</li>
+<li>CSS伪元素::after用来创建一个伪元素，作为已选中元素的最后一个子元素。通常会配合content属性来为该元素添加装饰内容，默认是行内元素。</li>
+</ul>
+</blockquote>
+<p>所以加上伪元素后的html结构大致是这样的：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>标签</span><br><span class="line">	:before 文本节点</span><br><span class="line">	p标签的文本节点</span><br><span class="line">	:after 文本节点</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span>标签</span><br></pre></td></tr></table></figure></p>
+<p>设置<code>z-index</code>属性让伪元素置于p标签的文本节点下方（<code>z-index</code>与<code>position: absolute</code>配合才能生效）。</p>
+<p>其次要注意的是，由于伪元素:after在:before上层，所以:before的宽度要大于:after，不然会被覆盖。（至于为什么:after在:before上册我也没有找到靠谱的资料，我只能猜想这和css的渲染规则有关。）</p>
+<p>另外，代码中还涉及到了<code>data-*</code>和<code>content</code>的相关内容，这部分可以参阅以下资料学习。<br><a href="https://www.w3schools.com/tags/att_global_data.asp" target="_blank" rel="noopener">HTML  data-*  Attributes | w3c</a><br><a href="https://davidwalsh.name/css-content-attr" target="_blank" rel="noopener">CSS content and attr</a></p>
+<p>另外，还可以配合使用<code>-webkit-background-clip</code>和<code>-webkit-text-fill-color</code>属性，让文字变得更有设计感。</p>
+<p>(END)</p>
+<hr>
+<p>相关资料：<br><a href="https://www.zhangxinxu.com/wordpress/2017/06/webkit-text-stroke-css-text-shadow/" target="_blank" rel="noopener">-webkit-text-stroke文字描边CSS属性及展开</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/-webkit-text-stroke#%E7%94%A8%E4%BE%8B" target="_blank" rel="noopener">-webkit-text-stroke | MDN</a></p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/::before" target="_blank" rel="noopener">::before | MDN</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/::after" target="_blank" rel="noopener">::after | MDN</a></p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/04/18/判断数组里是否有某个字段/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          JS-判断数组里是否有某个值
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/04/16/CSS-将stylus样式代码转成css/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">CSS-将stylus样式代码转成css</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#之前工作中遇到需要文字描边的情况，学习到了text-stroke属性，记录总结一下。"><span class="nav-number">1.</span> <span class="nav-text">之前工作中遇到需要文字描边的情况，学习到了text-stroke属性，记录总结一下。</span></a></li></ol><li class="nav-item nav-level-4"><a class="nav-link" href="#如果想要实现多重描边效果，伪元素-before-after-多层叠加模拟。"><span class="nav-number"></span> <span class="nav-text">如果想要实现多重描边效果，伪元素(:before + :after)多层叠加模拟。</span></a>
+    
+    </li></div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2019 XiaoMan&#39;s Blog All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s5.cnzz.com/z_stat.php?id=1275621465&web_id=1275621465" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

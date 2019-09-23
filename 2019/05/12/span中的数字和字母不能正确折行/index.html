@@ -3,26 +3,32 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>Git-清理工作目录 | XiaoMan&#39;s Blog</title>
+  <title>CSS-span中的数字和字母不能正确折行 | XiaoMan&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="Git">
+  <meta name="keywords" content="hexo">
   
   
   
   
-  <meta name="description" content="写在前面：你需要谨慎地使用git clean这个命令，因为它被设计为从工作目录中移除未被追踪的文件。 如果你改变主意了，你也不一定能找回来那些文件的内容。相较之下，使用stash储藏或者在清理之前使用-n模拟清除是较为稳妥的方法。下面是git clean的后缀及说明：123456789-q, --quiet           do not print names of files removed">
-<meta name="keywords" content="Git">
+  <meta name="description" content="前段时间遇到的一个bug，当时的情况大概是这样： （代码结构很简单，我就不贴了，就是div标签里面有一个span标签。）很明显，数字和字母都没有正确折行，整个布局都被打乱了。 解决这个问题还蛮简单的，只需要用到css的word-break属性。CSS 属性 word-break 指定了怎样在单词内断行，详情见MDN文档——word-break属性 | MDN。word-break主要有四个取值（非">
+<meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git-清理工作目录">
-<meta property="og:url" content="http://yoursite.com/2019/01/15/Git-清理工作目录/index.html">
+<meta property="og:title" content="CSS-span中的数字和字母不能正确折行">
+<meta property="og:url" content="http://yoursite.com/2019/05/12/span中的数字和字母不能正确折行/index.html">
 <meta property="og:site_name" content="XiaoMan&#39;s Blog">
-<meta property="og:description" content="写在前面：你需要谨慎地使用git clean这个命令，因为它被设计为从工作目录中移除未被追踪的文件。 如果你改变主意了，你也不一定能找回来那些文件的内容。相较之下，使用stash储藏或者在清理之前使用-n模拟清除是较为稳妥的方法。下面是git clean的后缀及说明：123456789-q, --quiet           do not print names of files removed">
+<meta property="og:description" content="前段时间遇到的一个bug，当时的情况大概是这样： （代码结构很简单，我就不贴了，就是div标签里面有一个span标签。）很明显，数字和字母都没有正确折行，整个布局都被打乱了。 解决这个问题还蛮简单的，只需要用到css的word-break属性。CSS 属性 word-break 指定了怎样在单词内断行，详情见MDN文档——word-break属性 | MDN。word-break主要有四个取值（非">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-15T04:34:47.662Z">
+<meta property="og:image" content="https://storage.medinc.cn/01DBKTVG1NWE540G67756AAFSF.png">
+<meta property="og:image" content="https://storage.medinc.cn/01DBKVD55MS69MEFB6MGYRWTED.png">
+<meta property="og:image" content="https://storage.medinc.cn/01DBKVSWFHSP71ZE1AC8TCSXYV.png">
+<meta property="og:image" content="https://storage.medinc.cn/01DBKW8S6Q4NW62D394N67GXF5.png">
+<meta property="og:image" content="https://storage.medinc.cn/01DBKWYSWB3KN4H262PCSZPQSZ.png">
+<meta property="og:updated_time" content="2019-09-23T14:57:09.846Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git-清理工作目录">
-<meta name="twitter:description" content="写在前面：你需要谨慎地使用git clean这个命令，因为它被设计为从工作目录中移除未被追踪的文件。 如果你改变主意了，你也不一定能找回来那些文件的内容。相较之下，使用stash储藏或者在清理之前使用-n模拟清除是较为稳妥的方法。下面是git clean的后缀及说明：123456789-q, --quiet           do not print names of files removed">
+<meta name="twitter:title" content="CSS-span中的数字和字母不能正确折行">
+<meta name="twitter:description" content="前段时间遇到的一个bug，当时的情况大概是这样： （代码结构很简单，我就不贴了，就是div标签里面有一个span标签。）很明显，数字和字母都没有正确折行，整个布局都被打乱了。 解决这个问题还蛮简单的，只需要用到css的word-break属性。CSS 属性 word-break 指定了怎样在单词内断行，详情见MDN文档——word-break属性 | MDN。word-break主要有四个取值（非">
+<meta name="twitter:image" content="https://storage.medinc.cn/01DBKTVG1NWE540G67756AAFSF.png">
   
     <link rel="alternate" href="/atom.xml" title="XiaoMan&#39;s Blog" type="application/atom+xml">
   
@@ -104,7 +110,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-Git-清理工作目录" style="width: 66%; float:left;" class="article article-type-post" itemscope="" itemprop="blogPost">
+          <section id="main" style="float:none;"><article id="post-span中的数字和字母不能正确折行" style="width: 66%; float:left;" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -112,7 +118,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      Git-清理工作目录
+      CSS-span中的数字和字母不能正确折行
     </h1>
   
 
@@ -120,8 +126,8 @@
     
     <div class="article-meta">
       
-	<a href="/2019/01/15/Git-清理工作目录/" class="article-date">
-	  <time datetime="2019-01-15T04:34:36.000Z" itemprop="datePublished">一月 15, 2019</time>
+	<a href="/2019/05/12/span中的数字和字母不能正确折行/" class="article-date">
+	  <time datetime="2019-05-12T02:12:44.000Z" itemprop="datePublished">五月 12, 2019</time>
 	</a>
 
        
@@ -133,21 +139,27 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="写在前面：你需要谨慎地使用git-clean这个命令，因为它被设计为从工作目录中移除未被追踪的文件。-如果你改变主意了，你也不一定能找回来那些文件的内容。相较之下，使用stash储藏或者在清理之前使用-n模拟清除是较为稳妥的方法。"><a href="#写在前面：你需要谨慎地使用git-clean这个命令，因为它被设计为从工作目录中移除未被追踪的文件。-如果你改变主意了，你也不一定能找回来那些文件的内容。相较之下，使用stash储藏或者在清理之前使用-n模拟清除是较为稳妥的方法。" class="headerlink" title="写在前面：你需要谨慎地使用git clean这个命令，因为它被设计为从工作目录中移除未被追踪的文件。 如果你改变主意了，你也不一定能找回来那些文件的内容。相较之下，使用stash储藏或者在清理之前使用-n模拟清除是较为稳妥的方法。"></a>写在前面：你需要谨慎地使用git clean这个命令，因为它被设计为从工作目录中移除未被追踪的文件。 如果你改变主意了，你也不一定能找回来那些文件的内容。相较之下，使用stash储藏或者在清理之前使用-n模拟清除是较为稳妥的方法。</h5><p>下面是git clean的后缀及说明：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-q, --quiet           do not print names of files removed</span><br><span class="line">-n, --dry-run         dry run</span><br><span class="line">-f, --force           force</span><br><span class="line">-i, --interactive     interactive cleaning</span><br><span class="line">-d                    remove whole directories（删除整个目录）</span><br><span class="line">-e, --exclude &lt;pattern&gt;</span><br><span class="line">                      add &lt;pattern&gt; to ignore rules</span><br><span class="line">-x                    remove ignored files, too</span><br><span class="line">-X                    remove only ignored files</span><br></pre></td></tr></table></figure></p>
+        <p>前段时间遇到的一个bug，当时的情况大概是这样：</p>
+<p><img src="https://storage.medinc.cn/01DBKTVG1NWE540G67756AAFSF.png" alt="图示"><br>（代码结构很简单，我就不贴了，就是<code>div</code>标签里面有一个<code>span</code>标签。）<br>很明显，数字和字母都没有正确折行，整个布局都被打乱了。</p>
+<p>解决这个问题还蛮简单的，只需要用到css的<code>word-break</code>属性。CSS 属性 <code>word-break</code> 指定了怎样在单词内断行，详情见MDN文档——<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/word-break" target="_blank" rel="noopener">word-break属性 | MDN</a>。<br><code>word-break</code>主要有四个取值（非继承取值）：</p>
 <ul>
-<li><p>移除所有没有忽略的未跟踪文件：<br>$ git clean -d</p>
-</li>
-<li><p>移除所有未追踪的文件以及空的子目录:<br>$ git clean -f -d<br>(<code>-f</code> 意味着 _强制_ 或 “确定移除”)</p>
-</li>
-<li><p>做一次移除演示：<br>$ git clean -d -n<br>(使用 <code>-n</code> 选项运行命令，这意味着 “做一次演习——将要移除什么”。)</p>
-<p><strong>默认情况下，<code>git clean</code> 命令只会移除没有忽略的未跟踪文件。</strong></p>
-</li>
+<li>normal（默认）</li>
+<li>break-all</li>
+<li>keep-all</li>
+<li>break-word<br>normal是默认，就是上面图片的样子。</li>
 </ul>
-<p>如果想要移除<code>.gitiignore</code> 或其他忽略文件中的模式匹配的文件，则需要在clean后加 -x</p>
-<ul>
-<li>使用-i（interactive cleaning交互式清理）会以交互模式运行 clean 命令，这种方式下可以分别地检查每一个文件或者交互地指定删除的模式。也是一种比较稳妥的清理方式。</li>
-</ul>
-<p>以上内容参考自：<a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%82%A8%E8%97%8F%E4%B8%8E%E6%B8%85%E7%90%86" target="_blank" rel="noopener">官方文档-7.3 Git 工具-储藏与清理</a></p>
+<h3 id="break-all"><a href="#break-all" class="headerlink" title="break-all"></a>break-all</h3><blockquote>
+<p>对于non-CJK (CJK 指中文/日文/韩文) 文本，可在任意字符间断行。</p>
+</blockquote>
+<p>也就是说自由断行，只要该换行，不管前后直接断。</p>
+<p>🌰栗子<br><img src="https://storage.medinc.cn/01DBKVD55MS69MEFB6MGYRWTED.png" alt="图示"><br>如果<code>span</code>标签中的英文/数字内容不需要考虑连接问题，那使用<code>break-all</code>属性就OK了。<br>但是，如果<code>span</code>里面是一些英文语句，那这么做恐怕不妥。</p>
+<p>假如我把内容换成《I have a dream》演讲稿的其中一段，使用<code>break-all</code>值就会出现这种情况：</p>
+<p><img src="https://storage.medinc.cn/01DBKVSWFHSP71ZE1AC8TCSXYV.png" alt="图示"><br>很明显，左右两边边缘的单词也被断开了，这样断行显然是不规范的。</p>
+<h3 id="keep-all"><a href="#keep-all" class="headerlink" title="keep-all"></a>keep-all</h3><blockquote>
+<p>CJK 文本不断行。 Non-CJK 文本表现同 <code>normal</code>。</p>
+</blockquote>
+<p><code>keep-all</code>的断行规则基本上是按照空格或者回车符断行，说总是起来很抽象，让我们直接看示例：<br>🌰栗子<br><img src="https://storage.medinc.cn/01DBKW8S6Q4NW62D394N67GXF5.png" alt="图示"><br>上图第一个框里面的内容是连着写的，所以根本就没换行，下面的框中是演讲稿中的一段，可以看出来，是按照单词前后换行。</p>
+<h3 id="break-word"><a href="#break-word" class="headerlink" title="break-word"></a>break-word</h3><p>顾名思义，该属性从单词前后断行。<br>🌰栗子<br><img src="https://storage.medinc.cn/01DBKWYSWB3KN4H262PCSZPQSZ.png" alt="图示"><br>英文文章断的好像和<code>keep-all</code>没什么区别，而第一张图的断行j就看起来十分奇怪了。</p>
 <p>（END）</p>
 
       
@@ -156,7 +168,7 @@
       
       
   <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
 
       
         
@@ -191,19 +203,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/03/23/JS-删除数组中的某个元素/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/07/16/JS-判断用户当前网络状态/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">上一篇</strong>
       <div class="article-nav-title">
         
-          Js-删除数组中的某个元素
+          JS-判断用户当前网络状态
         
       </div>
     </a>
   
   
-    <a href="/2019/01/14/Git-更改本地分支名称/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/04/27/解决元素对不齐-基线对齐/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">Git-更改本地分支名称</div>
+      <div class="article-nav-title">CSS-两个inline-block元素出现上下错位</div>
     </a>
   
 </nav>
@@ -217,7 +229,7 @@
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#写在前面：你需要谨慎地使用git-clean这个命令，因为它被设计为从工作目录中移除未被追踪的文件。-如果你改变主意了，你也不一定能找回来那些文件的内容。相较之下，使用stash储藏或者在清理之前使用-n模拟清除是较为稳妥的方法。"><span class="nav-number">1.</span> <span class="nav-text">写在前面：你需要谨慎地使用git clean这个命令，因为它被设计为从工作目录中移除未被追踪的文件。 如果你改变主意了，你也不一定能找回来那些文件的内容。相较之下，使用stash储藏或者在清理之前使用-n模拟清除是较为稳妥的方法。</span></a></li></ol>
+      <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#break-all"><span class="nav-number">1.</span> <span class="nav-text">break-all</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#keep-all"><span class="nav-number">2.</span> <span class="nav-text">keep-all</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#break-word"><span class="nav-number">3.</span> <span class="nav-text">break-word</span></a></li></ol>
     
     </div>
   </aside>

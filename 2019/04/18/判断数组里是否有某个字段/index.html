@@ -3,26 +3,26 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>Git-清理工作目录 | XiaoMan&#39;s Blog</title>
+  <title>JS-判断数组里是否有某个值 | XiaoMan&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="Git">
+  <meta name="keywords" content="hexo">
   
   
   
   
-  <meta name="description" content="写在前面：你需要谨慎地使用git clean这个命令，因为它被设计为从工作目录中移除未被追踪的文件。 如果你改变主意了，你也不一定能找回来那些文件的内容。相较之下，使用stash储藏或者在清理之前使用-n模拟清除是较为稳妥的方法。下面是git clean的后缀及说明：123456789-q, --quiet           do not print names of files removed">
-<meta name="keywords" content="Git">
+  <meta name="description" content="1.array.indexOf若有：返回索引若无：-12.array.includes若有：true若无：false3.array.find若有：返回值本身若无：undefined4.array.findIndex若有：返回索引若无：-1 可参考文章：js判断一个数组是否包含一个指定的值">
+<meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git-清理工作目录">
-<meta property="og:url" content="http://yoursite.com/2019/01/15/Git-清理工作目录/index.html">
+<meta property="og:title" content="JS-判断数组里是否有某个值">
+<meta property="og:url" content="http://yoursite.com/2019/04/18/判断数组里是否有某个字段/index.html">
 <meta property="og:site_name" content="XiaoMan&#39;s Blog">
-<meta property="og:description" content="写在前面：你需要谨慎地使用git clean这个命令，因为它被设计为从工作目录中移除未被追踪的文件。 如果你改变主意了，你也不一定能找回来那些文件的内容。相较之下，使用stash储藏或者在清理之前使用-n模拟清除是较为稳妥的方法。下面是git clean的后缀及说明：123456789-q, --quiet           do not print names of files removed">
+<meta property="og:description" content="1.array.indexOf若有：返回索引若无：-12.array.includes若有：true若无：false3.array.find若有：返回值本身若无：undefined4.array.findIndex若有：返回索引若无：-1 可参考文章：js判断一个数组是否包含一个指定的值">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-15T04:34:47.662Z">
+<meta property="og:updated_time" content="2019-09-23T14:59:42.496Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git-清理工作目录">
-<meta name="twitter:description" content="写在前面：你需要谨慎地使用git clean这个命令，因为它被设计为从工作目录中移除未被追踪的文件。 如果你改变主意了，你也不一定能找回来那些文件的内容。相较之下，使用stash储藏或者在清理之前使用-n模拟清除是较为稳妥的方法。下面是git clean的后缀及说明：123456789-q, --quiet           do not print names of files removed">
+<meta name="twitter:title" content="JS-判断数组里是否有某个值">
+<meta name="twitter:description" content="1.array.indexOf若有：返回索引若无：-12.array.includes若有：true若无：false3.array.find若有：返回值本身若无：undefined4.array.findIndex若有：返回索引若无：-1 可参考文章：js判断一个数组是否包含一个指定的值">
   
     <link rel="alternate" href="/atom.xml" title="XiaoMan&#39;s Blog" type="application/atom+xml">
   
@@ -104,7 +104,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-Git-清理工作目录" style="width: 66%; float:left;" class="article article-type-post" itemscope="" itemprop="blogPost">
+          <section id="main" style="float:none;"><article id="post-判断数组里是否有某个字段" style="width: 66%; float:left;" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -112,7 +112,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      Git-清理工作目录
+      JS-判断数组里是否有某个值
     </h1>
   
 
@@ -120,8 +120,8 @@
     
     <div class="article-meta">
       
-	<a href="/2019/01/15/Git-清理工作目录/" class="article-date">
-	  <time datetime="2019-01-15T04:34:36.000Z" itemprop="datePublished">一月 15, 2019</time>
+	<a href="/2019/04/18/判断数组里是否有某个字段/" class="article-date">
+	  <time datetime="2019-04-18T13:15:11.000Z" itemprop="datePublished">四月 18, 2019</time>
 	</a>
 
        
@@ -133,22 +133,8 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="写在前面：你需要谨慎地使用git-clean这个命令，因为它被设计为从工作目录中移除未被追踪的文件。-如果你改变主意了，你也不一定能找回来那些文件的内容。相较之下，使用stash储藏或者在清理之前使用-n模拟清除是较为稳妥的方法。"><a href="#写在前面：你需要谨慎地使用git-clean这个命令，因为它被设计为从工作目录中移除未被追踪的文件。-如果你改变主意了，你也不一定能找回来那些文件的内容。相较之下，使用stash储藏或者在清理之前使用-n模拟清除是较为稳妥的方法。" class="headerlink" title="写在前面：你需要谨慎地使用git clean这个命令，因为它被设计为从工作目录中移除未被追踪的文件。 如果你改变主意了，你也不一定能找回来那些文件的内容。相较之下，使用stash储藏或者在清理之前使用-n模拟清除是较为稳妥的方法。"></a>写在前面：你需要谨慎地使用git clean这个命令，因为它被设计为从工作目录中移除未被追踪的文件。 如果你改变主意了，你也不一定能找回来那些文件的内容。相较之下，使用stash储藏或者在清理之前使用-n模拟清除是较为稳妥的方法。</h5><p>下面是git clean的后缀及说明：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-q, --quiet           do not print names of files removed</span><br><span class="line">-n, --dry-run         dry run</span><br><span class="line">-f, --force           force</span><br><span class="line">-i, --interactive     interactive cleaning</span><br><span class="line">-d                    remove whole directories（删除整个目录）</span><br><span class="line">-e, --exclude &lt;pattern&gt;</span><br><span class="line">                      add &lt;pattern&gt; to ignore rules</span><br><span class="line">-x                    remove ignored files, too</span><br><span class="line">-X                    remove only ignored files</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li><p>移除所有没有忽略的未跟踪文件：<br>$ git clean -d</p>
-</li>
-<li><p>移除所有未追踪的文件以及空的子目录:<br>$ git clean -f -d<br>(<code>-f</code> 意味着 _强制_ 或 “确定移除”)</p>
-</li>
-<li><p>做一次移除演示：<br>$ git clean -d -n<br>(使用 <code>-n</code> 选项运行命令，这意味着 “做一次演习——将要移除什么”。)</p>
-<p><strong>默认情况下，<code>git clean</code> 命令只会移除没有忽略的未跟踪文件。</strong></p>
-</li>
-</ul>
-<p>如果想要移除<code>.gitiignore</code> 或其他忽略文件中的模式匹配的文件，则需要在clean后加 -x</p>
-<ul>
-<li>使用-i（interactive cleaning交互式清理）会以交互模式运行 clean 命令，这种方式下可以分别地检查每一个文件或者交互地指定删除的模式。也是一种比较稳妥的清理方式。</li>
-</ul>
-<p>以上内容参考自：<a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%82%A8%E8%97%8F%E4%B8%8E%E6%B8%85%E7%90%86" target="_blank" rel="noopener">官方文档-7.3 Git 工具-储藏与清理</a></p>
-<p>（END）</p>
+        <p>1.array.indexOf<br>若有：返回索引<br>若无：-1<br>2.array.includes<br>若有：true<br>若无：false<br>3.array.find<br>若有：返回值本身<br>若无：undefined<br>4.array.findIndex<br>若有：返回索引<br>若无：-1</p>
+<p>可参考文章：<a href="https://www.cnblogs.com/hepengqiang/p/9822118.html" target="_blank" rel="noopener">js判断一个数组是否包含一个指定的值</a></p>
 
       
     </div>
@@ -156,7 +142,7 @@
       
       
   <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
 
       
         
@@ -191,19 +177,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/03/23/JS-删除数组中的某个元素/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/04/27/解决元素对不齐-基线对齐/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">上一篇</strong>
       <div class="article-nav-title">
         
-          Js-删除数组中的某个元素
+          CSS-两个inline-block元素出现上下错位
         
       </div>
     </a>
   
   
-    <a href="/2019/01/14/Git-更改本地分支名称/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/04/17/CSS-文字描边-text-stroke属性/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">Git-更改本地分支名称</div>
+      <div class="article-nav-title">CSS-文字描边-webkit-text-stroke属性</div>
     </a>
   
 </nav>
@@ -217,7 +203,7 @@
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#写在前面：你需要谨慎地使用git-clean这个命令，因为它被设计为从工作目录中移除未被追踪的文件。-如果你改变主意了，你也不一定能找回来那些文件的内容。相较之下，使用stash储藏或者在清理之前使用-n模拟清除是较为稳妥的方法。"><span class="nav-number">1.</span> <span class="nav-text">写在前面：你需要谨慎地使用git clean这个命令，因为它被设计为从工作目录中移除未被追踪的文件。 如果你改变主意了，你也不一定能找回来那些文件的内容。相较之下，使用stash储藏或者在清理之前使用-n模拟清除是较为稳妥的方法。</span></a></li></ol>
+      <ol class="nav">无</ol>
     
     </div>
   </aside>
