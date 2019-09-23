@@ -157,6 +157,57 @@
 <!-- Table of Contents -->
 
   
+    <article id="post-算法题 -螺旋数组" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/09/23/算法题 -螺旋数组/">算法题-螺旋数组</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/09/23/算法题 -螺旋数组/" class="article-date">
+	  <time datetime="2019-09-23T15:09:00.000Z" itemprop="datePublished">九月 23, 2019</time>
+	</a>
+
+       
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>题目：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">foo(<span class="number">1</span>) = [[<span class="number">1</span>]];</span><br><span class="line">foo(<span class="number">2</span>) = [ [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">           [<span class="number">4</span>,<span class="number">3</span>] ];</span><br><span class="line">foo(<span class="number">3</span>) = [ [<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]</span><br><span class="line">           [<span class="number">6</span>,<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">           [<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>] ];</span><br><span class="line">foo(<span class="number">4</span>) = [ [<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line">           [<span class="number">6</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">11</span>]</span><br><span class="line">           [<span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">12</span>]</span><br><span class="line">           [<span class="number">16</span>,<span class="number">15</span>,<span class="number">14</span>,<span class="number">13</span>] ];</span><br><span class="line">foo(<span class="number">5</span>) = [ [<span class="number">21</span>,<span class="number">22</span>,<span class="number">23</span>,<span class="number">24</span>,<span class="number">25</span>]</span><br><span class="line">           [<span class="number">20</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>,<span class="number">10</span>]</span><br><span class="line">           [<span class="number">19</span>, <span class="number">6</span>, <span class="number">1</span>, <span class="number">2</span>,<span class="number">11</span>]</span><br><span class="line">           [<span class="number">18</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>,<span class="number">12</span>]</span><br><span class="line">           [<span class="number">17</span>,<span class="number">16</span>,<span class="number">15</span>,<span class="number">14</span>,<span class="number">13</span>] ];</span><br></pre></td></tr></table></figure></p>
+<p>思路：<br><img src="http://a4.qpic.cn/psb?/V12DIXtJ37eHpl/VMxX95*aImuhsM7CyWqzPE6*Nxt4cmciJwjKy4EAk20!/m/dL8AAAAAAAAAnull&amp;bo=oAU4BAAAAAARB6k!&amp;rf=photolist&amp;t=5" alt="算法题-螺旋数组-思路"></p>
+<p>从图中<code>foo(5)</code>上的几个方框可以看出，<code>foo(5)</code>可以拆成五个部分，这五个部分代表了从<code>foo(1)</code>到<code>foo(5)</code>，<code>foo(n)</code>的<code>n</code>每大1，外面就多一层，单数加在左上，双数加在右下。</p>
+<p>因此我们把答案（下面的解法）分为两部分，一个函数是用来循环<code>boo(1)</code>（实际上是<code>boo(2)</code>）到<code>boo(n)</code>，另一个函数用来添加实际的数组项。</p>
+<p>解法：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> arr = [[<span class="number">1</span>]]</span><br><span class="line">  <span class="keyword">if</span> (n &gt; <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="comment">// n &gt; 1</span></span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> k = <span class="number">2</span>; k &lt;= n; k++) &#123;</span><br><span class="line">      arr = boo(arr, k)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> arr</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">boo</span>(<span class="params">array, n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (n % <span class="number">2</span> === <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="comment">// 双数</span></span><br><span class="line">  <span class="keyword">let</span> arr1 = []</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = n ** <span class="number">2</span>;i &gt;= n ** <span class="number">2</span> - n + <span class="number">1</span>; i --) &#123;</span><br><span class="line">      arr1.push(i)</span><br><span class="line">    &#125;</span><br><span class="line">    array.push(arr1)</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; n - <span class="number">1</span>; j ++) &#123;</span><br><span class="line">      array[j].push(n ** <span class="number">2</span> + j - <span class="number">2</span> * n + <span class="number">2</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> array</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// 单数</span></span><br><span class="line">  <span class="keyword">let</span> arr1 = []</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = n ** <span class="number">2</span> - n + <span class="number">1</span>;i &lt;= n ** <span class="number">2</span>; i++) &#123;</span><br><span class="line">      arr1.push(i)</span><br><span class="line">    &#125;</span><br><span class="line">    array.unshift(arr1)</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">1</span>; j &lt; n; j++) &#123;</span><br><span class="line">      array[j].unshift(n ** <span class="number">2</span> - n - j + <span class="number">1</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> array</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(foo(<span class="number">4</span>))</span><br><span class="line"><span class="comment">// 0:  (4) [7,  8,  9,  10]</span></span><br><span class="line"><span class="comment">// 1:  (4) [6,  1,  2,  11]</span></span><br><span class="line"><span class="comment">// 2:  (4) [5,  4,  3,  12]</span></span><br><span class="line"><span class="comment">// 3:  (4) [16,  15,  14,  13]</span></span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>（END）</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-JS-判断用户当前网络状态" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -624,52 +675,6 @@
 <!-- Table of Contents -->
 
   
-    <article id="post-Git-更改本地分支名称" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/01/14/Git-更改本地分支名称/">Git-更改本地分支名称</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2019/01/14/Git-更改本地分支名称/" class="article-date">
-	  <time datetime="2019-01-14T06:23:38.000Z" itemprop="datePublished">一月 14, 2019</time>
-	</a>
-
-       
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本地分支重命名指令：<br><strong>$ git branch -m {旧分支名} {新分支名}</strong></p>
-<p>（To Be Continue）</p>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-      
-  <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
-
-      
-    </footer>
-    <hr class="entry-footer-hr">
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
 
 
   <nav id="page-nav">
@@ -792,6 +797,18 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/2019/09/23/算法题 -螺旋数组/">算法题-螺旋数组</a></h6>
+              <span>九月 23, 2019</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/2019/07/16/JS-判断用户当前网络状态/">JS-判断用户当前网络状态</a></h6>
               <span>七月 16, 2019</span>
             </div>
@@ -834,18 +851,6 @@
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/04/17/CSS-文字描边-text-stroke属性/">CSS-文字描边-webkit-text-stroke属性</a></h6>
-              <span>四月 17, 2019</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -858,7 +863,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/">JS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">9</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/">JS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">10</span></li></ul>
     </div>
   </div>
 
@@ -878,7 +883,7 @@
     <h3 class="widget-title">归档</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
